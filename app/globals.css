@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #efe4c8;
+  --foreground: #1a1511;
+  --crimson: #9b1c2c;
+  --turf: #1e4a36;
+  --rule: #1a1511;
+}
+
+@theme inline {
+  --color-newsprint: #efe4c8;
+  --color-ink: #1a1511;
+  --color-crimson: #9b1c2c;
+  --color-turf: #1e4a36;
+  --color-rule: #1a1511;
+  --color-caption: #5c5146;
+  --font-display: var(--font-bebas);
+  --font-serif: var(--font-source-serif);
+  --font-stat: var(--font-ibm);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+.paper-grain {
+  background-image:
+    radial-gradient(rgba(26, 21, 17, 0.045) 0.6px, transparent 0.6px),
+    linear-gradient(180deg, rgba(255, 248, 230, 0.35), transparent 28%);
+  background-size: 3px 3px, 100% 18rem;
+}
+
+.hairline {
+  height: 1px;
+  background: var(--rule);
+}
+
+.double-rule {
+  border-top: 3px solid var(--crimson);
+  border-bottom: 1px solid var(--rule);
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.78;
+  padding-right: 0.35rem;
+  color: var(--crimson);
+}
+
+@media (min-width: 640px) {
+  .drop-cap::first-letter {
+    font-size: 4.75rem;
+    padding-right: 0.4rem;
+  }
+}
