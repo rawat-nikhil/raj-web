@@ -23,6 +23,13 @@ export const metadata: Metadata = {
   title: "Raj · Player of the Issue | Pitch & Paper",
   description:
     "A birthday special of Pitch & Paper: the player profile of Raj, No. 10 for Sunday XI.",
+  icons: {
+    icon: [
+      { url: "/football.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/football.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
